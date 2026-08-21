@@ -127,6 +127,7 @@ ul { list-style: none; }
 .section-subtitle { color: #9ca3af; text-align: center; max-width: 576px; margin: 0 auto 64px; }
 .section-title-dark { font-size: clamp(1.875rem, 5vw, 2.5rem); font-weight: 700; color: #1a1a1a; text-align: center; margin-bottom: 16px; }
 .section-subtitle-dark { color: #6b7280; text-align: center; max-width: 576px; margin: 0 auto 56px; }
+.portfolio-filter { color: #6b7280; text-align: center; min-height: 20px; margin: -32px auto 32px; font-size: 13px; }
 
 /* ===== SERVICES ===== */
 #services { background: #1a1a1a; padding: 96px 16px; }
@@ -408,43 +409,43 @@ ul { list-style: none; }
           <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3L8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></div>
           <h3>Marble Restoration</h3>
           <p>Eliminate scratches, etching, and dullness. We bring marble surfaces back to a high-gloss, mirror finish.</p>
-          <a href="#contact" class="service-link">Learn More &rarr;</a>
+          <a href="#gallery" class="service-link" data-service="marble">Learn More &rarr;</a>
         </div>
         <div class="service-card reveal">
           <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
           <h3>Hardwood Refinishing</h3>
           <p>Sand, stain, and seal hardwood floors to remove wear, scuffs, and discoloration — like new again.</p>
-          <a href="#contact" class="service-link">Learn More &rarr;</a>
+          <a href="#gallery" class="service-link" data-service="hardwood">Learn More &rarr;</a>
         </div>
         <div class="service-card reveal">
           <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
           <h3>Tile &amp; Grout Cleaning</h3>
           <p>Deep-clean and regrout tile surfaces, restoring color and eliminating years of built-up grime.</p>
-          <a href="#contact" class="service-link">Learn More &rarr;</a>
+          <a href="#gallery" class="service-link" data-service="tile-grout">Learn More &rarr;</a>
         </div>
         <div class="service-card reveal">
           <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
           <h3>Travertine Polishing</h3>
           <p>Fill voids, hone, and polish travertine to a smooth, luminous finish that lasts for years.</p>
-          <a href="#contact" class="service-link">Learn More &rarr;</a>
+          <a href="#gallery" class="service-link" data-service="travertine">Learn More &rarr;</a>
         </div>
         <div class="service-card reveal">
           <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <h3>Stone Sealing</h3>
           <p>Protect natural stone from stains and moisture with professional-grade sealing treatments.</p>
-          <a href="#contact" class="service-link">Learn More &rarr;</a>
+          <a href="#gallery" class="service-link" data-service="stone-sealing">Learn More &rarr;</a>
         </div>
         <div class="service-card reveal">
           <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
           <h3>Concrete Coating</h3>
           <p>Transform dull concrete floors with decorative coatings, epoxy, and polishing for a premium look.</p>
-          <a href="#contact" class="service-link">Learn More &rarr;</a>
+          <a href="#gallery" class="service-link" data-service="concrete">Learn More &rarr;</a>
         </div>
         <div class="service-card reveal">
           <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M5 11V7a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4"/><path d="M3 11h18v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M5 18v2M19 18v2"/></svg></div>
           <h3>Upholstery Cleaning</h3>
           <p>Deep-clean sofas, chairs, and fabric furniture to lift stains, odors, and allergens for a fresher home.</p>
-          <a href="#contact" class="service-link">Learn More &rarr;</a>
+          <a href="#gallery" class="service-link" data-service="upholstery">Learn More &rarr;</a>
         </div>
       </div>
     </div>
@@ -466,6 +467,7 @@ ul { list-style: none; }
       <p class="section-eyebrow reveal">Before &amp; After</p>
       <h2 class="section-title-dark reveal">See the Difference We Make</h2>
       <p class="section-subtitle-dark reveal">Real results from real Houston homes — every surface restored to its highest potential.</p>
+      <p id="portfolioFilter" class="portfolio-filter" aria-live="polite"></p>
       <div class="grid-3" id="ba2Grid"></div>
     </div>
   </section>
@@ -723,33 +725,33 @@ const heroSlides = [
 ];
 
 const beforeAfter1 = [
-  { title: "Marble Floor Restoration in Progress", before: `${VID}/edb6c519b_IMG_2415.mp4`, after: `${VID}/1ac812c49_IMG_2480.mp4`, isVideo: true },
-  { title: "Marble Vanity Restored to a Bright, Polished Finish", before: `${IMG}/3c1efe636_IMG_8675.jpg`, after: `${IMG}/4ed44d42c_IMG_8677.png` },
-  { title: "Marble Countertop Polished to a Mirror Finish", before: `${IMG}/677126728_IMG_8674.png`, after: `${IMG}/3a81e63a1_IMG_8673.png` },
-  { title: "Terrazzo Floors Restored to a Bright, Polished Finish", before: `${IMG}/b8995227e_IMG_8681.png`, after: `${IMG}/d9d5aa041_IMG_8682.png` },
-  { title: "Black Terrazzo Kitchen Floor Polished to a Mirror Finish", before: `${IMG}/3e3e761af_IMG_8684.png`, after: `${IMG}/6fa5b698d_IMG_8685.png` },
-  { title: "Black Terrazzo Hallway Restored & Polished", before: `${IMG}/f77dd4eec_IMG_8683.png`, after: `${IMG}/15e8f7472_IMG_8686.png` },
-  { title: "Commercial Tile Floor Deep Cleaned & Restored", before: `${IMG}/339da4878_IMG_8664.png`, after: `${IMG}/9df2c0a5d_IMG_8665.png` },
-  { title: "Kitchen Tile Floor Cleaned & Restored", before: `${IMG}/2dbbb73bd_IMG_8666.png`, after: `${IMG}/71811c0b2_IMG_8667.png` },
-  { title: "Garage Concrete Floor Polished & Sealed", before: `${IMG}/9e635d576_IMG_8668.png`, after: `${IMG}/478e22862_IMG_8669.png` },
-  { title: "Stamped Concrete Driveway Cleaned & Resealed", before: `${IMG}/f35f99b0c_IMG_8670.png`, after: `${IMG}/75c938cd2_IMG_8671.png` },
+  { title: "Marble Floor Restoration in Progress", categories: ["marble"], before: `${VID}/edb6c519b_IMG_2415.mp4`, after: `${VID}/1ac812c49_IMG_2480.mp4`, isVideo: true },
+  { title: "Marble Vanity Restored to a Bright, Polished Finish", categories: ["marble", "stone-sealing"], before: `${IMG}/3c1efe636_IMG_8675.jpg`, after: `${IMG}/4ed44d42c_IMG_8677.png` },
+  { title: "Marble Countertop Polished to a Mirror Finish", categories: ["marble"], before: `${IMG}/677126728_IMG_8674.png`, after: `${IMG}/3a81e63a1_IMG_8673.png` },
+  { title: "Terrazzo Floors Restored to a Bright, Polished Finish", categories: ["stone-sealing"], before: `${IMG}/b8995227e_IMG_8681.png`, after: `${IMG}/d9d5aa041_IMG_8682.png` },
+  { title: "Black Terrazzo Kitchen Floor Polished to a Mirror Finish", categories: ["stone-sealing"], before: `${IMG}/3e3e761af_IMG_8684.png`, after: `${IMG}/6fa5b698d_IMG_8685.png` },
+  { title: "Black Terrazzo Hallway Restored & Polished", categories: ["stone-sealing"], before: `${IMG}/f77dd4eec_IMG_8683.png`, after: `${IMG}/15e8f7472_IMG_8686.png` },
+  { title: "Commercial Tile Floor Deep Cleaned & Restored", categories: ["tile-grout"], before: `${IMG}/339da4878_IMG_8664.png`, after: `${IMG}/9df2c0a5d_IMG_8665.png` },
+  { title: "Kitchen Tile Floor Cleaned & Restored", categories: ["tile-grout"], before: `${IMG}/2dbbb73bd_IMG_8666.png`, after: `${IMG}/71811c0b2_IMG_8667.png` },
+  { title: "Garage Concrete Floor Polished & Sealed", categories: ["concrete"], before: `${IMG}/9e635d576_IMG_8668.png`, after: `${IMG}/478e22862_IMG_8669.png` },
+  { title: "Stamped Concrete Driveway Cleaned & Resealed", categories: ["concrete"], before: `${IMG}/f35f99b0c_IMG_8670.png`, after: `${IMG}/75c938cd2_IMG_8671.png` },
 ];
 
 const beforeAfter2 = [
-  { title: "Travertine Entryway Polished to a Mirror Finish", before: `${IMG}/fb1db3268_IMG_8694.png`, after: `${IMG}/46670737c_IMG_8696.png` },
-  { title: "Shower Bench Stone Cleaned & Restored", before: `${IMG}/3105d6a9a_IMG_8697.png`, after: `${IMG}/cb0c5608e_IMG_8698.png` },
-  { title: "Marble Hex Bathroom Floor Deep Cleaned & Polished", before: `${IMG}/6508f0ed8_IMG_8700.png`, after: `${IMG}/e8b225bff_IMG_8699.png` },
-  { title: "Terrazzo Floor Restored to a High-Gloss Mirror Finish", before: `${IMG}/9cdb20ad0_IMG_8701.png`, after: `${IMG}/036ad4e1d_IMG_8702.png` },
-  { title: "Dark Marble Shower Floor Deep Cleaned & Polished", before: `${IMG}/50ed11ff2_IMG_8705.png`, after: `${IMG}/8aa6b11e7_IMG_8706.png` },
-  { title: "Marble Countertop Etch Marks Removed & Repolished", before: `${IMG}/2cd3c92e2_IMG_8707.png`, after: `${IMG}/beddc8917_IMG_8708.png` },
-  { title: "Large Format Marble Bathroom Floor Polished & Sealed", before: `${IMG}/97244bc73_IMG_8709.png`, after: `${IMG}/4f2da72a3_IMG_8710.png` },
-  { title: "Black Marble Vanity Scratches Removed & Polished to a Mirror Finish", before: `${IMG}/dab5cb88e_IMG_8711.png`, after: `${IMG}/50b3b3109_IMG_8712.png` },
-  { title: "Large Marble Kitchen Island Polished to a Showroom Finish", before: `${IMG}/4ffbec92c_IMG_8714.png`, after: `${IMG}/34b02f6df_IMG_8713.png` },
-  { title: "Granite Kitchen Countertop Deep Cleaned & Polished to a High Gloss", before: `${IMG}/f20562b73_IMG_8715.png`, after: `${IMG}/adbe0d4e0_IMG_8720.png` },
-  { title: "Stone Shower Deep Cleaned & Grout Restored", before: `${IMG}/2f896265a_IMG_8722.png`, after: `${IMG}/82a69c6b8_IMG_8724.png` },
-  { title: "Upholstered Cushion Crayon Stains Fully Removed", before: `${IMG}/upholstery-before-1.jpg`, after: `${IMG}/upholstery-after-1.jpg` },
-  { title: "Sofa Arm Deep Cleaned & Stain-Free", before: `${IMG}/upholstery-before-2.jpg`, after: `${IMG}/upholstery-after-2.jpg` },
-  { title: "Upholstery Cushion Restored to Like-New Condition", before: `${IMG}/upholstery-before-3.jpg`, after: `${IMG}/upholstery-after-3.jpg` },
+  { title: "Travertine Entryway Polished to a Mirror Finish", categories: ["travertine", "stone-sealing"], before: `${IMG}/fb1db3268_IMG_8694.png`, after: `${IMG}/46670737c_IMG_8696.png` },
+  { title: "Shower Bench Stone Cleaned & Restored", categories: ["stone-sealing"], before: `${IMG}/3105d6a9a_IMG_8697.png`, after: `${IMG}/cb0c5608e_IMG_8698.png` },
+  { title: "Marble Hex Bathroom Floor Deep Cleaned & Polished", categories: ["marble"], before: `${IMG}/6508f0ed8_IMG_8700.png`, after: `${IMG}/e8b225bff_IMG_8699.png` },
+  { title: "Terrazzo Floor Restored to a High-Gloss Mirror Finish", categories: ["stone-sealing"], before: `${IMG}/9cdb20ad0_IMG_8701.png`, after: `${IMG}/036ad4e1d_IMG_8702.png` },
+  { title: "Dark Marble Shower Floor Deep Cleaned & Polished", categories: ["marble"], before: `${IMG}/50ed11ff2_IMG_8705.png`, after: `${IMG}/8aa6b11e7_IMG_8706.png` },
+  { title: "Marble Countertop Etch Marks Removed & Repolished", categories: ["marble"], before: `${IMG}/2cd3c92e2_IMG_8707.png`, after: `${IMG}/beddc8917_IMG_8708.png` },
+  { title: "Large Format Marble Bathroom Floor Polished & Sealed", categories: ["marble", "stone-sealing"], before: `${IMG}/97244bc73_IMG_8709.png`, after: `${IMG}/4f2da72a3_IMG_8710.png` },
+  { title: "Black Marble Vanity Scratches Removed & Polished to a Mirror Finish", categories: ["marble"], before: `${IMG}/dab5cb88e_IMG_8711.png`, after: `${IMG}/50b3b3109_IMG_8712.png` },
+  { title: "Large Marble Kitchen Island Polished to a Showroom Finish", categories: ["marble"], before: `${IMG}/4ffbec92c_IMG_8714.png`, after: `${IMG}/34b02f6df_IMG_8713.png` },
+  { title: "Granite Kitchen Countertop Deep Cleaned & Polished to a High Gloss", categories: ["stone-sealing"], before: `${IMG}/f20562b73_IMG_8715.png`, after: `${IMG}/adbe0d4e0_IMG_8720.png` },
+  { title: "Stone Shower Deep Cleaned & Grout Restored", categories: ["tile-grout", "stone-sealing"], before: `${IMG}/2f896265a_IMG_8722.png`, after: `${IMG}/82a69c6b8_IMG_8724.png` },
+  { title: "Upholstered Cushion Crayon Stains Fully Removed", categories: ["upholstery"], before: `${IMG}/upholstery-before-1.jpg`, after: `${IMG}/upholstery-after-1.jpg` },
+  { title: "Sofa Arm Deep Cleaned & Stain-Free", categories: ["upholstery"], before: `${IMG}/upholstery-before-2.jpg`, after: `${IMG}/upholstery-after-2.jpg` },
+  { title: "Upholstery Cushion Restored to Like-New Condition", categories: ["upholstery"], before: `${IMG}/upholstery-before-3.jpg`, after: `${IMG}/upholstery-after-3.jpg` },
 ];
 
 const videos = [
@@ -768,6 +770,30 @@ const testimonials = [
   { name: "Lisa C.", neighborhood: "Sugar Land", text: "Ronald took time to explain the entire process and delivered on every promise. Our hardwood floors are stunning. 10/10 would hire again.", stars: 5 },
   { name: "Carlos V.", neighborhood: "Katy", text: "Same-week availability was a lifesaver before our home sale. The floors looked so good our realtor asked for their number. Absolute pros.", stars: 5 },
 ];
+
+const serviceNames = {
+  marble: "Marble Restoration",
+  hardwood: "Hardwood Refinishing",
+  "tile-grout": "Tile & Grout Cleaning",
+  travertine: "Travertine Polishing",
+  "stone-sealing": "Stone Sealing",
+  concrete: "Concrete Coating",
+  upholstery: "Upholstery Cleaning",
+};
+let activePortfolioCategory = null;
+
+function projectsForCategory(projects) {
+  return activePortfolioCategory
+    ? projects.filter(project => project.categories.includes(activePortfolioCategory))
+    : projects;
+}
+
+function renderEmptyPortfolioState(grid) {
+  const message = document.createElement('p');
+  message.className = 'portfolio-filter';
+  message.textContent = `We do not have completed ${serviceNames[activePortfolioCategory].toLowerCase()} projects to display yet.`;
+  grid.appendChild(message);
+}
 
 // ===== HERO SLIDESHOW =====
 function initSlideshow() {
@@ -791,7 +817,9 @@ function initSlideshow() {
 // ===== BEFORE/AFTER 1 =====
 function renderBeforeAfter1() {
   const grid = document.getElementById('ba1Grid');
-  beforeAfter1.forEach(item => {
+  grid.replaceChildren();
+  const projects = projectsForCategory(beforeAfter1);
+  projects.forEach(item => {
     const card = document.createElement('div');
     card.className = 'ba-card reveal';
     const beforeMedia = item.isVideo
@@ -807,14 +835,18 @@ function renderBeforeAfter1() {
       </div>
       <div class="ba-card-title"><p>${item.title}</p></div>
     `;
+    card.classList.add('visible');
     grid.appendChild(card);
   });
+  if (!projects.length) renderEmptyPortfolioState(grid);
 }
 
 // ===== BEFORE/AFTER 2 =====
 function renderBeforeAfter2() {
   const grid = document.getElementById('ba2Grid');
-  beforeAfter2.forEach(item => {
+  grid.replaceChildren();
+  const projects = projectsForCategory(beforeAfter2);
+  projects.forEach(item => {
     const card = document.createElement('div');
     card.className = 'ba-card reveal';
     card.innerHTML = `
@@ -824,7 +856,24 @@ function renderBeforeAfter2() {
       </div>
       <div class="ba-card-title"><p>${item.title}</p></div>
     `;
+    card.classList.add('visible');
     grid.appendChild(card);
+  });
+  if (!projects.length) renderEmptyPortfolioState(grid);
+}
+
+function initServiceLinks() {
+  document.querySelectorAll('.service-link[data-service]').forEach(link => {
+    link.addEventListener('click', () => {
+      activePortfolioCategory = link.dataset.service;
+      renderBeforeAfter1();
+      renderBeforeAfter2();
+      const filterLabel = document.getElementById('portfolioFilter');
+      const projectCount = projectsForCategory([...beforeAfter1, ...beforeAfter2]).length;
+      filterLabel.textContent = projectCount
+        ? `Showing ${projectCount} completed ${serviceNames[activePortfolioCategory].toLowerCase()} ${projectCount === 1 ? 'project' : 'projects'}.`
+        : `No completed ${serviceNames[activePortfolioCategory].toLowerCase()} projects are in the portfolio yet.`;
+    });
   });
 }
 
@@ -1031,6 +1080,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlideshow();
   renderBeforeAfter1();
   renderBeforeAfter2();
+  initServiceLinks();
   initComparisons();
   renderVideos();
   renderTestimonials();
